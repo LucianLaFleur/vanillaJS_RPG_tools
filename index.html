@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" type="text/css" href="char-tracker.css"> -->
+    <title>my home</title>
+    <style>
+
+        .inline-group {
+            display: flex;
+            align-items: center;
+            gap: 2px;
+        }
+
+        .inline-group label {
+            margin-right: 5px;
+        }
+
+        .inline-group input {
+            width:40px;
+            margin-right: 5px;
+        }
+
+    </style>
+</head>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dice Roller</title>
+</head>
+<body>
+    <button id="dumbButton">Dummy button</button>
+    <div class="dice-roll-section-wrapper">
+        <div class="inline-group">
+            <label for="dice-key">Enter a number 1-20 : </label>
+            <input type="number" id="dice-key" value="10" min="1" max="20">
+            <button onclick="ad_hoc_dice_roll()">Roll Dice</button>
+        </div>
+        <h1>Dice Roller</h1>
+        <div>
+            <div class="inline-group">
+                <label for="charName">Char:</label>
+                <input type="text" id="charName" name="charName" required><br>
+                <label for="Roll Label 1">Label</label>
+                <input type="text" id="rollLabel1" name="rollLabel1" required><br>
+            </div>
+            <div class="inline-group">
+                <p>Rolling 1d20</p>
+                <label for="plusFlatAccNum"> +</label>
+                <input type="number" id="plusFlatAccNum" name="plusFlatAccNum" required><br>
+                <label for="hitThreshold">Against AC/Threshold</label>
+                <input type="number" id="hitThreshold" name="hitThreshold" required><br>
+                <!-- checkbox for "advantage" -->
+                <!-- checkbox for "disadvantage" -->
+                <!-- checkbox for "automaticHit" -->
+            </div>
+            <div class="inline-group">
+                <label for="numDice">DAM dice </label>
+                <input type="number" id="numDamDice" name="numDamDice" required><br>
+                <label for="numSides">d</label>
+                <input type="number" id="numDamSides" name="numDamSides" required><br>
+                <label for="plusFlatNum">+</label>
+                <input type="number" id="plusFlatDamNum" name="plusFlatDamNum" required><br>
+            </div>
+            <button id="rollButton">Roll Dice</button>
+        </div>
+        <h2>Roll Results:</h2>
+        <div id="rollResults"></div>
+    </div>
+    <script src="myScript.js"></script>
+
+</body>
+
+</html>
+<!-- right nav bar for selection pieces? ex, hairstyle, headear, eyewear, top, bottoms, feet -->
+<!-- exclusive with sets (top and bottom with "school uniform") -->
+
