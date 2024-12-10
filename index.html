@@ -7,7 +7,11 @@
     <!-- <link rel="stylesheet" type="text/css" href="char-tracker.css"> -->
     <title>my home</title>
     <style>
-
+        html {
+            background-color: #225;
+            color:gold;
+            font-size: 24px;
+        }
         .inline-group {
             display: flex;
             align-items: center;
@@ -22,7 +26,69 @@
             width:40px;
             margin-right: 5px;
         }
+        /* ........................ */
+        #column-container {
+            margin-left: 15px;
+        }
 
+        .container {
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .stat-item {
+            display: flex;
+            justify-content: space-between;
+            margin: 5px 0;
+        }
+
+        .stat-item label {
+            font-size: 16px;
+            color:rgb(251, 150, 19);
+            background-color: rgb(56, 17, 58);
+            width: 85px; 
+            border: 3px solid limegreen;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .stat-item input {
+            padding:3px;
+            width: 40px; 
+            border: 3px solid cyan;
+            text-align: center;
+            margin-right: 10px;
+        }
+
+        /* Additional class for row display */
+        .row {
+            width: 760px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            margin-left: 0; /* Align to the left side of the screen */
+        }
+
+        .name {
+            text-decoration: underline;
+            font-size: larger;
+            font-weight: 400;
+            text-align: left;
+            margin-top: -2px;
+            margin-bottom: -2px;
+            display: block; /* Ensure the paragraph takes up its own line */
+            /* margin-bottom: 1em; Add spacing after the paragraph */
+        }
+
+        .hero-char {
+            color:limegreen;
+        }
+        .enemy-char {
+            color:red;
+        }
     </style>
 </head>
 <!DOCTYPE html>
@@ -31,7 +97,35 @@
     <title>Dice Roller</title>
 </head>
 <body>
-    <button id="dumbButton">Dummy button</button>
+    <div>
+        <h2>Direct attack contest</h2>
+        <p>
+            <select id="name1-input">
+                <option value="none" selected>none</option>
+            </select> 
+            attacks
+            <select id="name2-input">
+                <option value="none" selected>none</option>
+            </select>
+        </p>
+        <button id="ad-hoc-atk" disabled>Initiate Attack</button>
+    </div>
+<hr>
+    <button id="alice-atk-bob">Alice attack bob</button>
+    
+    <button id="charlie-atk-bob">Charlie attack bob</button>
+    
+    <button id="bob-atk-alice">Bob attack alice</button>
+    
+    <button id="delta-atk-charlie">delta attack charlie</button>
+
+    <button id="dumbButton2">make stats check console</button>
+    <div id="column-container" class="container column">
+        <div id="row-container1" class="container row">
+        </div>        
+        <div id="row-container2" class="container row">
+        </div>
+    </div>
     <div class="dice-roll-section-wrapper">
         <div class="inline-group">
             <label for="dice-key">Enter a number 1-20 : </label>
