@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monster Card Template</title>
+    <link rel="stylesheet" type="text/css" href="card_template.css">
+</head>
+<body>
+    <div class="card">
+        <!-- Card Name -->
+        <div class="card-header" contenteditable="true">Monster Name</div>
+
+        <!-- Picture -->
+        <div class="card-image">
+            <img id="monster-image" src="" alt="Monster Picture">
+            <input type="file" id="image-input" class="upload-btn">
+        </div>
+
+        <!-- HP and AC -->
+        <div class="card-stats">
+            <div id="hp">HP: <span contenteditable="true">8</span></div>
+            <div id="ac">AC: <span contenteditable="true">11</span></div>
+        </div>
+        <div class="card-info-input-area">
+            <!-- Stat Block -->
+            <div class="text-area">
+                <textarea id="stat-block">STR 1 DEX 1 CON 2 INT -1 WIS -1 CHA -1</textarea>
+            </div>
+
+            <!-- Other Text -->
+            <div class="text-area">
+                <textarea id="action-text"> (Targets closest) club - +3 hit, 1d4 + 1 blunt ; claw + 5, 1d6 + 2 slash</textarea>
+            </div>
+        </div>
+    </div>
+
+    <button id="create-card">Create Card</button>
+
+    <div class="output-container">
+        <ul id="card-list"></ul>
+        <li>
+            <div class="generated-card">
+                <div class="name-header">name123</div>
+                <div class="image">
+                    <img src=".\imgs\nun1.png" alt="Monster Picture">
+                </div>
+                <div class="card-info-output-area">
+                    <div class="stats">
+                        <div class="hp-div">HP: <span contenteditable="true">22</span>/22</div>
+                        <div class="ac-div">AC: 12</div>
+                    </div>
+                    <div class="description">
+                        <p><strong>Stats:</strong> STR DEX CON INT WIS CHA</p>
+                        <p><strong>actions:</strong> bite - +5 hit, 1d6 + 2 pierce </p>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </div>
+
+    <script src="card_template.js"></script>
+</body>
+</html>
