@@ -1,0 +1,2 @@
+thinBorder745 is 745px tall and serves as the border to the monster-cards in the card_template program
+nun1 is the dummy picture to demonstrate how a sample card will render with an image
