@@ -3,6 +3,21 @@ ttrpg tools and other quirky stuff coded in javascript with no bells or whistles
 
 
 devlog -
+
+--- 16 Dec. 2024 ----------------------------------
+updated some formatting issues in CSS before uploading card_template files to github
+the dummy card will not
+
+--- 15 Dec. 2024 ----------------------------------
+Card template trio made (js, html, css) 
+- Inputs allow for info that gets translated into a trading-card template.
+- Newly generated items will spawn in a list below prevously generated ones.
+- Image input is formatted correctly on the frame (using a background image for the border)
+- Intended as info cards for enemies (so I could print things out and be more interesting)
+  *Known issue - Card is a fixed height, so excessive info will "run on"
+  - different formatting for extra info in an initiative tracker is planned.
+  
+
 --- 10 Dec. 2024 ----------------------------------
 
 Best achievement: multiple characters object data displayed; can direct one character to attack another and HP dynamically update on screen through use of proxy objects
