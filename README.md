@@ -4,6 +4,17 @@ ttrpg tools and other quirky stuff coded in javascript with no bells or whistles
 
 devlog -
 
+--- 21 Dec 2024 -----------------------------------
+Monster maker adjusts defensive balance, making a bell curve from rolling 4d6, and based on the variation from 14 at the center increases/decreases AC by 1 and inversely HP by 10%.
+Thus, a monster with +1 ac gets -10 of it's standard HP for it's base ranking.
+NYI: offensive stat changes...
+Output can go to the screen, but is commented out; data is shown in console.log's while testing
+! - I have commented out a section that shows how to make the display of the output in a DIV; as this takes a long time to reformat, i will only be using console.log until a final output style is decided upon.
+
+Added baseAbility to work like STR, DEX, etc. average for a mon of that CR.
+
+Tarot card stuff is clutter, but is intended for a whacky integration down the line; obviously the tarot information is lacking in completion.
+
 --- 16 Dec. 2024 ----------------------------------
 updated some formatting issues in CSS before uploading card_template files to github
 the dummy card will not
