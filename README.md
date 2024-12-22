@@ -4,7 +4,12 @@ ttrpg tools and other quirky stuff coded in javascript with no bells or whistles
 
 devlog -
 
+-- 21 Dec (evening) ----
+Tarot information moved to its own set of html and JS. 
+The html poriton is uploaded, JS data under revision.
+
 --- 21 Dec 2024 -----------------------------------
+
 Monster maker adjusts defensive balance, making a bell curve from rolling 4d6, and based on the variation from 14 at the center increases/decreases AC by 1 and inversely HP by 10%.
 Thus, a monster with +1 ac gets -10 of it's standard HP for it's base ranking.
 NYI: offensive stat changes...
