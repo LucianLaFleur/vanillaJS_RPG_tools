@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Card Grid</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+      padding: 20px;
+      background-color: #f0f0f0;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-rows: repeat(5, 120px);
+      grid-template-columns: repeat(5, 80px);
+      gap: 5px;
+    }
+
+    .grid div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #ccc;
+      border: 1px solid #aaa;
+      font-size: 14px;
+      color: #333;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="grid" id="grid">
+    <!-- 25 spaces, generated dynamically -->
+  </div>
+  <button id="makeCardsButton">Make Cards</button>
+
+  <script>
+
+    // 'Hearts', 'Diamonds', 'Clubs', 'Spades'
+    const cardMappingToRooms = {
+    '2 of Hearts': "Graveyard",
+    '3 of Hearts': "Greenhouse",
+    '4 of Hearts': "Courtyard",
+    '5 of Hearts': "Wall and Portcullis / guard gate",
+    '6 of Hearts': "River with dilapidated bridge",
+    '7 of Hearts': "overgrown forest path",
+    '8 of Hearts': "hedge maze",
+    '9 of Hearts': "stone tower",
+    '10 of Hearts': "water-mill (sawmill)",
+    'J of Hearts': "windmill (flour)",
+    'Q of Hearts': "Flower garden and trimmed hedges",
+    'K of Hearts': "A grand bedroom",
+    'A of Hearts': "A grand dining hall",
+    '2 of Clubs': "A dilapidated wooden temple with a large ceremonial bell",
+    '3 of Clubs': "A shrine with several stone images of monks in front",
+    '4 of Clubs': "Haunted path of red spider lilies",
+    '5 of Clubs': "A zen garden with bonsai trees and stone lanterns",
+    '6 of Clubs': "Floating islands of Torii gates",
+    '7 of Clubs': "A canal with a red arch bridge",
+    '8 of Clubs': "alley between wooden buildings",
+    '9 of Clubs': "training dojo, tatami mat floors",
+    '10 of Clubs': "ikebana ant tea ceremony room",
+    'J of Clubs': "bamboo thicket",
+    'Q of Clubs': "Haunted bathouse",
+    'K of Clubs': "Reeds at the riverside",
+    'A of Clubs': "Natural onsen and waterfall",
+    '2 of Diamonds': "Floating and flying lantern riverside (various small boats float on their own)",
+    '3 of Diamonds': "ningyo izakaya (mermaid tavern, partially submerged to allow aquatic patrons)",
+    '4 of Diamonds': "ningyo cafe (a cafe of living dolls, angry at the mermaid's popularity)",
+    '5 of Diamonds': "Silent pachinko parlor & gambling hall",
+    '6 of Diamonds': "Haunted stage theatre (ghosts keep reancting scenes of their lives)",
+    '7 of Diamonds': "giant treehouse network",
+    '8 of Diamonds': "Vanishing Subway Platform: appears only at midnight, rumored to take its passengers to otherworldly destinations",
+    '9 of Diamonds': "Mokumokuren: An abandoned building with eyes peering through the holes in its shoji screens",
+    '10 of Diamonds': "ghostly crosswalk under surrounded by giant flatscreens with flickers of nightmares",
+    'J of Diamonds': "Subway train of the shadow people. They don't seem to be aware of your presence...",
+    'Q of Diamonds': "Old Arcade: A neglected pay phone rings... gatcha games beckon, and claw gamed grasp at nothing",
+    'K of Diamonds': "Abandoned mall",
+    'A of Diamonds': "Giant bridge at a significant river crossing",
+    '2 of Spades': "An unassuming house (of a serial killer)",
+    '3 of Spades': "Hospital",
+    '4 of Spades': "Train station",
+    '5 of Spades': "Corner convenience store",
+    '6 of Spades': "office building with a rooftop shrine ",
+    '7 of Spades': "An urban canal with concrete enbankment",
+    '8 of Spades': "A bike path between houses in the suburbs",
+    '9 of Spades': "A city park with many trees and a small pond",
+    '10 of Spades': "walking trail through a wooded area in the suburbs",
+    'J of Spades': "bus stop shelter",
+    'Q of Spades': "picnic in the park, set for tea, but the only current guest is a doll leaning against the basket",
+    'K of Spades': "neon mask alley (everyone has a festival mask with neon outlines)",
+    'A of Spades': "Kaitenzushi restaurant",
+    'Color Joker': "butcher shop",
+    'Monochrome Joker': "High school"
+}
+// Other cool, unused locations
+//  firewatch tower, police station, fire department station, office building
+// radio tower like Tokyo tower
+
+    // 
+
+    const neutralFeatures = [
+    "elevation", 
+    "descent", 
+    "slippery", 
+    "echoes", 
+    "dampness", 
+    "creaking floorboards", 
+    "rotting smell", 
+    "hidden passage", 
+    "gloomy lighting", 
+    "cold draft", 
+    "dusty shelves", 
+    "faint whispers", 
+    "stagnant water", 
+    "shadows shifting"
+    ];
+
+    const helpfulFeatures = [
+    "light source (eg. torch, lantern, lighter)", 
+    "movable", 
+    "barrels to loot", 
+    "abandoned sack to loot", 
+    "traces of target objective (easier to do challenge)", 
+    "altar/fresh pie for restoring health", 
+    "warding sigil (ablative HP)", 
+    "secret alcove", 
+    "broken wall for escape", 
+    "medicinal herbs", 
+    "rope for climbing", 
+    "hidden cache of supplies"
+    ];
+
+    const harmfulFeatures = [
+    "poison vine barrier", 
+    "poison dart trap", 
+    "broken glass on floor", 
+    "pitch dark", 
+    "flooded floor with electric hazards", 
+    // dance floor for performance or you take electric damage on fail
+    "cursed idol", 
+    "whispering voices inducing madness", 
+    // psy damage if you understand Undercommon
+    "claw/tentacle/saw coming through wall/water", 
+    "unnerving chanting",
+    // disadv. on next wis. save 
+    "hidden pitfall to snakes", 
+    "rusty spike ceiling",
+    "suspicious hole the size of a fist", 
+    "monster in a cage", 
+    "noise summons another enemy"
+    ];
+
+    // Step 1: Create the deck of cards
+    const suits = ['Hearts', 'Diamonds', 'Clubs', 'Spades'];
+    const faces = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A'];
+    const jokers = ['Color Joker', 'Monochrome Joker'];
+    const deck = suits.flatMap(suit => faces.map(face => `${face} of ${suit}`)).concat(jokers);
+
+    // Step 2: Populate the grid dynamically
+    const grid = document.getElementById('grid');
+    const gridSize = 5;
+
+    for (let i = 0; i < gridSize * gridSize; i++) {
+      const cell = document.createElement('div');
+      cell.dataset.index = i;
+      grid.appendChild(cell);
+    }
+
+    // Step 3: Helper function to generate a random card
+    function getRandomCard() {
+      return deck[Math.floor(Math.random() * deck.length)];
+    }
+
+    // Step 4: Helper function to generate a random chance
+    function randomChance(percent) {
+      return Math.random() < percent / 100;
+    }
+
+    // Step 5: Function to make cards
+    document.getElementById('makeCardsButton').addEventListener('click', () => {
+      const cells = Array.from(grid.children);
+
+      // Clear the grid
+      cells.forEach(cell => {
+        cell.textContent = '';
+        cell.style.backgroundColor = '#ccc';
+      });
+
+      // Center card
+      const centerIndex = Math.floor((gridSize * gridSize) / 2);
+      const centerCell = cells[centerIndex];
+      const randcard1 = getRandomCard()
+      
+      if (Object.hasOwn(cardMappingToRooms, randcard1)){
+        centerCell.textContent = cardMappingToRooms[randcard1];
+      } else {
+        centerCell.textContent = randcard1;
+      }
+      centerCell.style.backgroundColor = 'white';
+
+      // Populate inner ring (3x3 around center)
+      const innerRing = [-6, -5, -4, -1, 1, 4, 5, 6];
+      innerRing.forEach(offset => {
+        const idx = centerIndex + offset;
+        if (idx >= 0 && idx < gridSize * gridSize && randomChance(20)) {
+          const cell = cells[idx];
+          const randcard2 = getRandomCard()
+          if (Object.hasOwn(cardMappingToRooms, randcard2)){
+            cell.textContent = cardMappingToRooms[randcard2];
+        } else {
+            cell.textContent = randcard2;
+        }
+          cell.style.backgroundColor = 'white';
+        }
+      });
+
+      // Populate outer perimeter (requires adjacent check)
+      const outerRingOffsets = [-12, -11, -10, -9, -8, -7, -2, 2, 8, 9, 10, 11, 12];
+      outerRingOffsets.forEach(offset => {
+        const idx = centerIndex + offset;
+        if (idx >= 0 && idx < gridSize * gridSize) {
+          const adjacentIndices = [-6, -5, -4, -1, 1, 4, 5, 6].map(adj => idx + adj);
+          const hasAdjacentCard = adjacentIndices.some(adjIdx => {
+            if (adjIdx >= 0 && adjIdx < gridSize * gridSize) {
+              const adjCell = cells[adjIdx];
+              return adjCell.textContent !== '';
+            }
+            return false;
+          });
+
+          if (hasAdjacentCard && randomChance(25)) {
+            const cell = cells[idx];
+            const randcard3 = getRandomCard()
+            if (Object.hasOwn(cardMappingToRooms, randcard3)){
+                cell.textContent = cardMappingToRooms[randcard3];
+            } else {
+                cell.textContent = randcard3;
+            }
+            cell.style.backgroundColor = 'white';
+          }
+        }
+      });
+    });
+  </script>
+</body>
+</html>
