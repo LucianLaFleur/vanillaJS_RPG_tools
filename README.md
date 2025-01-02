@@ -4,6 +4,12 @@ ttrpg tools and other quirky stuff coded in javascript with no bells or whistles
 
 devlog -
 
+1 Jan 2025----
+Upploaded the card-map (based on a deck of playing cards and an object-mapping currently, but could be converted to just use an array)
+makes 5x5 grid of connected room instances at fixed percentage chance for things to spawn
+Mapping of card name to room name complete, so it will be the room name suggestions that appear in the html display
+All code for JS and CSS is self-contained in the html file, currently
+
 -- 21 Dec (evening) ----
 Tarot information moved to its own set of html and JS. 
 The html poriton is uploaded, JS data under revision.
