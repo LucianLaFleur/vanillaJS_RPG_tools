@@ -38,7 +38,7 @@
             <div class="stats">
                 <div class="init-div">IN:<span contenteditable="true">+1</span> </div>
                 <div class="hp-div">HP: <span contenteditable="true">${hp}</span>/${hp}</div>
-                <div class="ac-div">AC: ${ac}</div>
+                 <div class="ac-div">AC: <span contenteditable="true">${ac}</span></div>
             </div>
             <div class="description">
                 <p>
