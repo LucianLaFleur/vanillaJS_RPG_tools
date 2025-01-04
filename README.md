@@ -13,7 +13,13 @@ INCLUDED PROGRAMS:
    - 24 ptPlotOutline - This is a detailed list of story scenes for a complete novel, which is later elaborated on by the 72 point plot outline, breaking each scene into 3 beats. While as a snowflake, this all starts as just one sentence each, it allows for much more structure than other outline methods. Just remember that each point is roughtly the same amount, at least in theory, for proper pacing. The purpose of organizing the scenes so is because of PACING either making or breaking a book.
    - EXTRA HIDDEN TRICK - How to do the 72 point plot outline? -> Copy the 24 point plot outline, then draw 3 cards for each of those points. Every scene has 3 beats, but it's best to approach it in small chunks.
    
-
+2) Card Maker - (upload your own images into TTRPG cards easily)
+   OVERVIEW - Intended to make a trading card-like template for characters and monsters for reference in TTRPGs. The sample is completely editable, but the defaults refer to typical DnD stats you'd expect in 5e at low level. The nun is a placeholder... not really related to anything.
+   USAGE - Allows you to UPLOAD YOU OWN IMAGE onto the card, along with any custom data you want
+   420 px is the optimal image height, with portrait-layout preferred 3:2 ratio height to width, though squares work too. Landscape won't be nice on the format though.
+   The defaults in the generation box just help to speed things up with the typical core stats.
+   All main fields are editable on the output card, but I expect everything to have stats and actions at a bare minimum, thus those fixed fields.
+   If you want to save it, I recommend doing a screenshot. I don't really have a "print-card" functionality to this...
 
 ----
 
