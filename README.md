@@ -1,8 +1,26 @@
 # vanillaJS_RPG_tools
 ttrpg tools and other quirky stuff coded in javascript with no bells or whistles.
 
+INCLUDED PROGRAMS:
+
+1) Novel Tarot -
+   OVERVIEW: Very simple GUI helping with randomizing different story elements for outlining, as well as simply picking random tarot cards. The whole purpose is to pick random strings associated with tarot symbolism and slot them in with different story-building elements. The buttons along the top represent these functionalities, with the obvious "clear" button on the far right doing just that and resetting the output to a blank screen (it will ask to confirm before clearing, so you don't lose a good roll).
+   - Quick 3 cards - draws 3 random cards and displays the tarot information for them
+   - Character designer - has 14 traits indicated by the first phrase in each line. Used to design characters, based on the increasing depth chart (first 7 being basic for side characters, and latter 7 being more detailed). Note that the appearance motif is my quick-cheat for throwaway characters, looking at lines 1, 2, and the last for quick improv.
+   - Init shotty - (The initial shotgun) refers to a handful of vague plot points in how I employ a version of the snowflake outline. A few crucial elements of an overall stroy arc are intended to be summarized in just one sentence for each of the elements. This just lays out that initial pattern very quickly.
+   - Foil Char Pair - Lines up two characters side-by-side with the intention of helping to make complementing or contrasting characters (referring to the literary device of a foil).
+   - 8 point plot - Aother layer of depth to the modded snowflwake outline, 1 sentence should be associated with each of the 8 primary phases of a story arc.
+   - 24 ptPlotOutline - This is a detailed list of story scenes for a complete novel, which is later elaborated on by the 72 point plot outline, breaking each scene into 3 beats. While as a snowflake, this all starts as just one sentence each, it allows for much more structure than other outline methods. Just remember that each point is roughtly the same amount, at least in theory, for proper pacing. The purpose of organizing the scenes so is because of PACING either making or breaking a book.
+   - EXTRA HIDDEN TRICK - How to do the 72 point plot outline? -> Copy the 24 point plot outline, then draw 3 cards for each of those points. Every scene has 3 beats, but it's best to approach it in small chunks.
+   
+
+
+----
 
 devlog -
+
+2 Jan 2025 ---
+update the files for Tarot generator, begin documentation of included program sets
 
 1 Jan 2025----
 Upploaded the card-map (based on a deck of playing cards and an object-mapping currently, but could be converted to just use an array)
