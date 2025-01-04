@@ -1,0 +1,27 @@
+// individulal strings for the 24 point plot structure breakdown
+// reference only, not currently used in any files or scripts
+
+`1) Really Bad Day (the normalcy for this world and the character’s place in it are established) -  ` 
+`2) Strange Thing Breaks The Mold (something upsets the usual pace of things, and we see how the world reacts) ` 
+`3) escalating upset leads to an opportunity (the hero actively reacts to the change in pace and makes an active decision)` 
+`4) Call to Adventure (Key figures / info about new world exposed)` 
+`5) Out of depth moment (show progress with new world, but struggle with main theme)` 
+`6) Antagonist’s Opening Gambit (just as the heroes are making progress, an opposing force ups the ante and reveals things are much tougher than before)` 
+`7) Gathering power (usually, reach out to allies, avoid enemies.)` 
+`8) Trials (fun and games, character development, and overcoming the main character’s weakness)` 
+`9) Proving Growth (show progress towards primary goal and overcoming former weaknesses)` 
+`10) Evil response (protagonists put on back foot by the antagonists’ new development)` 
+`11) Planning reveals complications (trying to fix the new complications shows a new depth to the antagonist’s power)` 
+`12) clarification of consequences and a demand for action (the heroes are faced with a severe decision about what to do about the full extent of the threat and its consequences.)` 
+`13) reflection on primary motivation (question why they are still there)` 
+`14) revised plans (preparing to carry out the results of the evaluation, secondary characters react to decision)` 
+`15) In insightful glimpse (an important advancement towards the hero’s new desire is made, giving a glimpse of either hope or despair as the hero is rooted in, or disillusioned from, their new plans. *Climax of B-plot)` 
+`16) direct action - the most logical, straightforward solutions to the antagonistic problem are attempted.` 
+`17) antagonist’s counter - the villain reveals they are competent by thwarting the direct solution with a counter-play (might be foreshadowed before, but ignored because the main character doesn’t have influence).` 
+`18) key revelation - (an important element is found, which can turn the tide of the central conflict *Resolves B-plot)` 
+`19) severe setback pushes to the breaking point (the heroes are almost entirely defeated and face the edge of ultimate defeat)` 
+`20) pep-talk/intervention helps to give hope (a risky idea offers some small chance of success)` 
+`21) Calvary ride (a fearless charge towards the risk, wholeheartedly)` 
+`22) The tower falls (ultimate devastation falls all around the heroes, and it appears that all is lost)` 
+`23) Heroic moment (an epic feat allows for the hero to overcome even the worst of circumstances and defeat the ultimate evil)` 
+`24) return and reflect (establish a new normal. show how things are different from their original life, reincorporate main theme to show character development. Show how the heroes’ actions changed everything)` 
