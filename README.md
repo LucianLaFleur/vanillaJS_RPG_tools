@@ -14,21 +14,21 @@ INCLUDED PROGRAMS:
    - EXTRA HIDDEN TRICK - How to do the 72 point plot outline? -> Copy the 24 point plot outline, then draw 3 cards for each of those points. Every scene has 3 beats, but it's best to approach it in small chunks.
    
 2) Card Maker - (upload your own images into TTRPG cards easily)
-   OVERVIEW - Intended to make a trading card-like template for characters and monsters for reference in TTRPGs. The sample is completely editable, but the defaults refer to typical DnD stats you'd expect in 5e at low level. The nun is a placeholder... not really related to anything.
-   USAGE - Allows you to UPLOAD YOU OWN IMAGE onto the card, along with any custom data you want
-   420 px is the optimal image height, with portrait-layout preferred 3:2 ratio height to width, though squares work too. Landscape won't be nice on the format though.
-   The defaults in the generation box just help to speed things up with the typical core stats.
-   All main fields are editable on the output card, but I expect everything to have stats and actions at a bare minimum, thus those fixed fields.
-   If you want to save it, I recommend doing a screenshot. I don't really have a "print-card" functionality to this...
+   - OVERVIEW - Intended to make a trading card-like template for characters and monsters for reference in TTRPGs. The sample is completely editable, but the defaults refer to typical DnD stats you'd expect in 5e at low level. The nun is a placeholder... not really related to anything.
+   - USAGE - Allows you to UPLOAD YOU OWN IMAGE onto the card, along with any custom data you want
+   - 420 px is the optimal image height, with portrait-layout preferred 3:2 ratio height to width, though squares work too. Landscape won't be nice on the format though.
+   - The defaults in the generation box just help to speed things up with the typical core stats.
+   - All main fields are editable on the output card, but I expect everything to have stats and actions at a bare minimum, thus those fixed fields.
+   - If you want to save it, I recommend doing a screenshot. I don't really have a "print-card" functionality to this...
 
 3) cardmap - (A solution between battle-maps and theatre of the mind)
-   A 5x5 grid spawns with an initial location at the center.
-   There's a chance for a connected card to occur in the middle and outer rings only if there's one that's viable closer to the center.
-   ! NOTE: You'll probably need several generations to make an interesting setup.
-   Makes a randomized set of connected locations on the location/movement structure from the Arkham Horror card game. Intended to be able to move to adjacent cards with the movement action, simplifying travel (and using engage/disengage as actions in the 3-action economy to simplify distance instead of battle-maps).
-   Suggestions: threshold connections are not included, some randomization for challenges could occur on the topic of crossing rooms at a cost similar to "on enter" keyword.
-   Also suggest making passageways that allow for normally unconnected rooms to have a passage, unlocked as a reward in-narrative.
-   WARNING / NYI: The current card setup is built on an expected deck of 54 playing cards, so there's an odd data dictionary when an array would also suffice. This may be improved upon in the future, but it a relic of the previous setup gimmick, as I wanted to be able to re-create the maps representationally with playing cards, IRL. 
+   - A 5x5 grid spawns with an initial location at the center.
+   - There's a chance for a connected card to occur in the middle and outer rings only if there's one that's viable closer to the center.
+   - ! NOTE: You'll probably need several generations to make an interesting setup.
+   - Makes a randomized set of connected locations on the location/movement structure from the Arkham Horror card game. Intended to be able to move to adjacent cards with the movement action, simplifying travel (and using engage/disengage as actions in the 3-action economy to simplify distance instead of battle-maps).
+   - Suggestions: threshold connections are not included, some randomization for challenges could occur on the topic of crossing rooms at a cost similar to "on enter" keyword.
+   - Also suggest making passageways that allow for normally unconnected rooms to have a passage, unlocked as a reward in-narrative.
+   - WARNING / NYI: The current card setup is built on an expected deck of 54 playing cards, so there's an odd data dictionary when an array would also suffice. This may be improved upon in the future, but it a relic of the previous setup gimmick, as I wanted to be able to re-create the maps representationally with playing cards, IRL. 
 
 ----
 
