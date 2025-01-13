@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="threeD6Project.css">
+    <title>3d6 roller insanity</title>
+    
+</head>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dice Roller</title>
+</head>
+<body>
+    <div id="navbarContainer"></div>
+    <div>
+        <div class="inline-group">
+            <label for="dice-key">Dice-pool Rank 1-20 : </label>
+            <input type="number" id="dice-key" value="10" min="1" max="20">
+            <button onclick="ad_hoc_dice_roll()">Roll Dice</button>
+        </div>
+        <p id="simple-result-display">(area for ad-hoc dice output)</p>
+        <p>
+            Dice pool contest:
+            <br>
+            <input type="text" id="monte1-name-input" value="goblin" required>
+            <input type="number" id="monte1-input" value="10" min="1" max="40">
+            (vs.)
+            <input type="text" id="monte2-name-input" value="dwarf" required>
+            <input type="number" id="monte2-input" value="10" min="1" max="40">
+        </p>
+        <button id="dumb-button-3">Roll!</button>
+    </div>
+    <div>
+        <h2>Direct attack contest</h2>
+        <p>
+            <select id="name1-input">
+                <option value="none" selected>none</option>
+            </select> 
+            attacks
+            <select id="name2-input">
+                <option value="none" selected>none</option>
+            </select>
+        </p>
+        <button id="ad-hoc-atk" disabled>Initiate Attack</button>
+    </div>
+<hr>
+    <button id="alice-atk-bob">Alice attack bob</button>
+    
+    <button id="charlie-atk-bob">Charlie attack bob</button>
+    
+    <button id="bob-atk-alice">Bob attack alice</button>
+    
+    <button id="delta-atk-charlie">delta attack charlie</button>
+    <div style="border:8px solid lime; border-radius:13px;">
+        <p style="text-align: center;">Stat distribution averages per block:</p>
+        <ul class="row2">
+            <li>7 avg = 68</li>
+            <li>8 avg = 96</li>
+            <li>9 avg = 132</li>
+            <li>10 avg = 176</li>
+            <li>11 avg = 228</li>
+            <li>12 avg = 288</li>
+        </ul>
+        <ul style="list-style-type:square;">
+            <li>
+                <label for="avail-stat-pts-input">Available points pool: </label>
+                <input type="number" id="avail-stat-pts-input" value="176" min="10" max="2000">
+            </li>
+            <li>
+                <label for="n-of-stats-input">N of stats to gen</label>
+                <input type="number" id="n-of-stats-input" value="4" min="1" max="28">
+            </li>
+            <li>
+                <label for="base-lvl-input">Existing base level</label>
+                <input type="number" id="base-lvl-input" value="0" min="0" max="20">
+            </li>
+          </ul> 
+        <p>
+            Create char : 
+            <button id="dumbButton2">randomize combat stat block</button>
+        </p>
+    </div>
+    <div id="column-container" class="container column">
+        <div id="row-container1" class="container row">
+        </div>        
+        <div id="row-container2" class="container row">
+        </div>
+    </div>
+    <div class="dice-roll-section-wrapper">
+        <div style="display:block">
+            <h1>DnD 5e. Dice Roller</h1>
+                <div class="inline-group">
+                    <label for="charName1">Char:</label>
+                    <input type="text" id="charName1" name="charName1" value="Alice" required><br>
+                    <!-- <label for="Roll Label 1">Label</label>
+                    <input type="text" id="rollLabel1" name="rollLabel1" required><br> -->
+                </div>
+                <div class="inline-group">
+                    <p>Rolling 1d20</p>
+                    <label for="plusFlatAccNum"> +</label>
+                    <input type="number" id="plusFlatAccNum1" name="plusFlatAccNum1" value="6" required><br>
+                    <label for="hitThreshold">vs. AC/DC</label>
+                    <input type="number" id="hitThreshold1" name="hitThreshold1" value="14" required><br>
+                    <!-- checkbox for "advantage" -->
+                    <!-- checkbox for "disadvantage" -->
+                    <!-- checkbox for "automaticHit" -->
+                </div>
+                <div class="inline-group">
+                    <label for="numDice">DAM dice </label>
+                    <input type="number" id="numDamDice1" name="numDamDice1" value="1" required><br>
+                    <label for="numSides">d</label>
+                    <input type="number" id="numDamSides1" name="numDamSides1" value="6" required><br>
+                    <label for="plusFlatNum">+</label>
+                    <input type="number" id="plusFlatDamNum1" name="plusFlatDamNum1" value="2" required><br>
+                </div>
+                <button id="rollButton1">Roll Dice</button>
+                <p>Roll Results:</p>
+                <div id="rollResults"></div>
+            </div>
+            <!-- 2nd group -->
+            <div style="display:block">
+                <h1>DnD 5e. Dice Roller</h1>
+                    <div class="inline-group">
+                        <label for="charName">Char:</label>
+                        <input type="text" id="charName2" name="charName2" value="Bandit" required><br>
+                    </div>
+                    <div class="inline-group">
+                        <p>Rolling 1d20</p>
+                        <label for="plusFlatAccNum"> +</label>
+                        <input type="number" id="plusFlatAccNum2" name="plusFlatAccNum2" value="4" required><br>
+                        <label for="hitThreshold">vs. AC/DC</label>
+                        <input type="number" id="hitThreshold2" name="hitThreshold2" value="14" required><br>
+                        <!-- checkbox for "advantage" -->
+                        <!-- checkbox for "disadvantage" -->
+                        <!-- checkbox for "automaticHit" -->
+                    </div>
+                    <div class="inline-group">
+                        <label for="numDice">DAM dice </label>
+                        <input type="number" id="numDamDice2" name="numDamDice2" required><br>
+                        <label for="numSides">d</label>
+                        <input type="number" id="numDamSides2" name="numDamSides2" required><br>
+                        <label for="plusFlatNum">+</label>
+                        <input type="number" id="plusFlatDamNum2" name="plusFlatDamNum2" required><br>
+                    </div>
+                    <button id="rollButton2">Roll Dice</button>
+                    <p>Roll Results:</p>
+                    <div id="rollResults"></div>
+                </div>
+                
+            </div>
+    </div>
+<hr>
+    <h1>Right triangle calculator</h1>
+    <div class="triangle-finder">
+        <div class="inline-group">
+            <label for="horizontal_leg">horizontal dist.</label>
+            <input type="number" id="horizontal_leg" value="15" min="5" max="9005">
+            <label for="vertical_leg">vertical dist.</label>
+            <input type="number" id="vertical_leg" value="15" min="5" max="9005">
+            <button onclick="calculateHypotenuse()">Get Dist.</button>
+            <div id="hypotenuseResults">Output:</div>
+        </div>
+    </div>
+    
+    <script src="threeD6Project.js"></script>
+
+</body>
+
+</html>
+<!-- right nav bar for selection pieces? ex, hairstyle, headear, eyewear, top, bottoms, feet -->
+<!-- exclusive with sets (top and bottom with "school uniform") -->
+
