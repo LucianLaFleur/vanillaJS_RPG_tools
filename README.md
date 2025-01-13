@@ -1,3 +1,9 @@
+- NYI / dev notes
+  </br> threeD6Project has repeat code needing a new function for multiple blocks. Dunno How to dynamically create
+  </br> threeD6Project also needs an editable span label among each item for initiative tracking
+  </br> threeD6Project has the York navbar, which this repo isn't configured for yet...
+
+
 # vanillaJS_RPG_tools
 ttrpg tools and other quirky stuff coded in javascript with no bells or whistles.
 
