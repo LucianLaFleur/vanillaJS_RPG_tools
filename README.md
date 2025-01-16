@@ -36,9 +36,15 @@ INCLUDED PROGRAMS:
    - Also suggest making passageways that allow for normally unconnected rooms to have a passage, unlocked as a reward in-narrative.
    - WARNING / NYI: The current card setup is built on an expected deck of 54 playing cards, so there's an odd data dictionary when an array would also suffice. This may be improved upon in the future, but it a relic of the previous setup gimmick, as I wanted to be able to re-create the maps representationally with playing cards, IRL. 
 
+4) string randomizers -> Genre randomizer
+   - visual representation of randomizing a bunch of details. This will be exapanded on later. This template isn't half bad for this functionality if you're essentailly playing a game of mad-libs...
+
 ----
 
 devlog -
+
+- 16 Jan 2025 - add first string randomizer prorotype.
+In dev envrionment, working on converting it into a auto-prompter for img-gen keywords... made good progress, but encountering some display errors that need diagnosis.
 
 2 Jan 2025 ---
 update the files for Tarot generator, begin documentation of included program sets
