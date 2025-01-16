@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="genreRandomizer.css">
+    <title>Genre Randomizer</title>
+</head>
+<body>
+    <div id="navbarContainer"></div>
+    <div class="container">
+        <div class="genre-div" id="sci-fi">
+            <h3>Sci-fi</h3>
+            <button onclick="randomizeGenre('sci-fi')">Randomize</button>
+            <p id="sci-fi-title">(none)</p>
+        </div>
+        <div class="genre-div" id="fantasy">
+            <h3>Fantasy</h3>
+            <button onclick="randomizeGenre('fantasy')">Randomize</button>
+            <p id="fantasy-title">(none)</p>
+        </div>
+        <div class="genre-div" id="mystery">
+            <h3>Mystery</h3>
+            <button onclick="randomizeGenre('mystery')">Randomize</button>
+            <p id="mystery-title">(none)</p>
+        </div>
+        <div class="genre-div" id="political">
+            <h3>Political</h3>
+            <button onclick="randomizeGenre('political')">Randomize</button>
+            <p id="political-title">(none)</p>
+        </div>
+        <div class="genre-div" id="romance">
+            <h3>Romance</h3>
+            <button onclick="randomizeGenre('romance')">Randomize</button>
+            <p id="romance-title">(none)</p>
+        </div>
+        <div class="genre-div" id="self-help">
+            <h3>Self-help</h3>
+            <button onclick="randomizeGenre('self-help')">Randomize</button>
+            <p id="self-help-title">(none)</p>
+        </div>
+    </div>
+
+    <!-- <div id="all-genres"> -->
+    <p id="default-str">Editable string tail: <span id="string-tail" contenteditable="true"> potato </span></p>
+    <div id="controls">
+        <button onclick="randomizeAll()">Randomize All</button>
+        <button id="save-button" onclick="saveString()">Save String</button>
+    </div>
+    <p id="output-string"></p>
+    <hr>
+    <ul id="saved-strings"></ul>
+
+
+    <script src="genreRandomizer.js"></script>
+
+</body>
+</html>
