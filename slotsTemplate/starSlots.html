@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slot Machine</title>
+    <link rel="stylesheet" type="text/css" href="starSlots.css">
+</head>
+<body>
+    <div id="slot-container">
+        <div class="top-container" id="top-container">
+            <div class="top-img" id="top-img"></div>
+            <div class="bottom-img" id="bottom-img"></div>
+        </div>
+        <div class="slot-machine" id="slot-machine">
+            <!-- Slots will be populated dynamically -->
+                <div class="slot"><img class="slot-icon" src="./img/jackIcon1.png"></div>
+                <div class="slot"><img class="slot-icon" src="./img/jackIcon1.png"></div>
+                <div class="slot"><img class="slot-icon" src="./img/jackIcon1.png"></div>
+                <div class="slot"><img class="slot-icon" src="./img/queenIcon1.png"></div>
+                <div class="slot"><img class="slot-icon" src="./img/queenIcon1.png"></div>
+                <div class="slot"><img class="slot-icon" src="./img/queenIcon1.png"></div>
+                <div class="slot"><img class="slot-icon" src="./img/kingIcon1.png"></div>
+                <div class="slot"><img class="slot-icon" src="./img/kingIcon1.png"></div>
+                <div class="slot"><img class="slot-icon" src="./img/kingIcon1.png"></div>
+        </div>
+    </div>
+    <div class="right-column">
+        <!-- diagnostic only... -->
+        <!-- <button id="triggerBtn" onclick="slideToShowGif('./img/roger4.gif', 'shrink-up', 'slide-up')">roger up</button> -->
+
+        <button id="spin-btn1">Spin!</button>
+        <h3>(buttons to test outcomes)</h3>
+        <div>
+            <button id="jack-single">single-jack</button>
+            <button id="jack-multi">multi-jack</button>
+        </div>
+        <div>
+            <button id="queen-single">1-queen</button>
+            <button id="queen-multi">multi-queen</button>
+        </div>
+        <div>
+            <button id="king-single">single-king</button>
+            <button id="king-multi">multi-king</button>
+        </div>
+        <div>
+            <button id="mix-multi">mix-hit</button>
+            <button id="jackpot">jackpot</button>
+        </div>
+        <!-- Below, diagnostic, ignore  -->
+        <!-- <div id="spin-result" class="output"></div> -->
+        <div id="payout-result" class="output">Payout info:</div>
+        <div id="points-display">100</div>
+        <button id="increment-btn">Increment plus 5 points</button>
+        <button id="decrement-btn">manual minus 100 points</button>
+        <button id="clear-btn">Reset to 100 points</button>
+        <hr>
+
+        
+    </div>
+
+<script src="starSlots.js"></script>
+</body>
+</html>
