@@ -1,0 +1,202 @@
+.top-container {
+    overflow: hidden;
+    position:relative;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-gap: 5px;
+    border-radius: 8px;
+    width: 484px; 
+    height:370px;
+    border: 6px solid black;
+    background-color:#000000;
+}
+
+.top-img {
+    z-index: 2;
+    background-image: url("./img/ship1.png");
+}
+
+.bottom-img {
+    z-index: 1;
+    transform: translateY(100%); /* Initially hidden */
+}
+
+.top-img, .bottom-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: all 1.2s ease;
+    background-position: center;
+    background-size: contain; 
+    background-repeat: no-repeat; 
+}
+
+/* Animation classes */
+.shrink-up {
+    transform: translateY(-100%);
+}
+
+.slide-up {
+    transform: translateY(0);
+}
+
+.gif-overlay {
+    top: 0;
+    left: 0;
+    width: 484px; 
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: black; 
+    z-index: 1; 
+}
+
+.slot-machine {
+    padding: 2px 42px;
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+    /* justify-content: space-around; */
+    grid-gap: 5px;
+    border-radius: 8px;
+    width: 420px; 
+    border: 6px solid black;
+    /* for pasting the bg image */
+    background-image: url("./img/lightspeed.gif");
+    background-size:cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+.slot {
+    width: 100px;
+    height: 80px;
+    position: relative;
+    display: flex;
+    border-radius: 8px;
+    background-color: whitesmoke;
+    border: 2px solid black;
+    align-items: center;
+    justify-content: center;
+    transition: border 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+}
+
+.slot-icon {
+    height: 100%;
+    width: 100%;
+}
+
+
+
+/* .spinning-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 484px;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: black;
+    z-index: -1; 
+} */
+
+.highlight {
+    /* border: 2px solid green; */
+    box-shadow: 0px 0px 14px 7px rgba(232,255,28,1);
+    transition: transform 0.5s;
+}
+
+.grow {
+    transition: transform 0.5s;
+    transform: scale(1.4); /* 40% larger */
+}
+
+
+/* ----------------- VHS scan lines for spin ----------------- */
+.spinning {
+    animation: spinAnimation 0.5s linear infinite;
+}
+
+/* Existing spin animation  */
+@keyframes spinAnimation {
+    0% { filter: blur(0px);}
+    50% { filter: blur(3px);}
+    100% { filter: blur(0px);}
+} 
+
+/* Pixelation effect */
+.slot.spinning {
+    animation: spinAnimation 0.5s linear infinite, pixelationEffect 0.2s steps(4) infinite;
+    background: repeating-linear-gradient(
+        to bottom,
+        #000,
+        #000 10px,
+        #111 10px,
+        #111 20px
+    );
+    filter: brightness(1.2) contrast(0.8);
+} 
+
+/* ----------------- /VHS scan lines for spin ----------------- */
+/* for the text while spinning */
+.text-overlay {
+    text-align: center;
+    align-items: center;
+    z-index: 2;
+    font-size: 40px;
+    color:red;
+    background: linear-gradient(rgba(141, 0, 0, 0.1), rgba(0, 0, 0, 0.14));
+}
+.output {
+    margin-top: 20px;
+}
+
+.line-hit {
+    font-weight: bold;
+    color: green;
+}
+
+.miss {
+    font-weight: bold;
+    color: red;
+}
+button {
+    padding: 5px 10px;
+    background-color: rgb(81, 4, 95);
+    color: gold;
+    border: 3px solid gold;
+    border-radius: 10px;
+    font-weight: 400;
+    font-size: 33px;
+}
+button:hover {
+    background-color: rgb(131, 2, 154);
+    color: rgb(171, 145, 0);;
+    border-color: rgb(171, 145, 0);
+}
+
+#slot-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.right-column {
+    display: flex;
+    border: 5px solid black;
+    width: 400px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; /* Optional, if you want text to be centered as well */
+}
+
+button {
+    margin-top: 10px; /* Optional, for spacing between button and other elements */
+}
+
+body {
+    display: flex;
+}
