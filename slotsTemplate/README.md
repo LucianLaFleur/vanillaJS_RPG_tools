@@ -21,34 +21,37 @@
 - Each must item in the array must be populated with a filename to be available for the random pool to draw from when hit
 </br> jackArr = ["./img/singJack.gif", "./img/singJack1.gif", "./img/singJack2.gif", "./img/singJack3.gif"]
 - A similar structure to ^^ above can be applied if you have lots of victory images for queen, king, jackpot, as well. Basically, just copy the structure and apply the function to the others
-</br> In the .js file, I use the line `const randomJackGif = getRandItemFromArr(jackArr, "lastJack") ` to generate a random gif to display. Basically, you just need to do this before the other items that you want random multiple images to be selected from, as this is the mechanism of random selection from an arr (assuming you also made an arr, like queenArr instead of jackArr in the example above).
+</br> In the .js file, I use the line `const randomJackGif = getRandItemFromArr(jackArr, "lastJack") ` to generate a random gif to display. 
+</br>Basically, you just need to do this before the other items that you want random multiple images to be selected from, as this is the mechanism of random selection from an arr 
+</br>(assuming you also made an arr, like queenArr instead of jackArr in the example above).
 
 - Spin image (images to display during the "spinning" phase, while the slot reels are "turning")
-"./img/spin1.gif", "./img/spin2.gif", "./img/spin3.gif""
-
-
+</br>"./img/spin1.gif", "./img/spin2.gif", "./img/spin3.gif""
+</br>
 <h2> Audio file documentation </h2>
-can make more audio elements and add the variables to "startAudArr"; these will randomly be selected from when hitting the start button.
-Reduce this to only one item to get a consistent starting sound.
-./aud/startAud1.wav
-./aud/startAud2.wav
-./aud/startAud3.wav
-
-Columns 1 and 2 will each trigger a sound.
-./aud/col1Hit.wav
-./aud/col2Hit.wav
-Column 3 will trigger either a win noise related to the item that won, or it will make the miss noise
-
+</br>can make more audio elements and add the variables to "startAudArr"; these will randomly be selected from when hitting the start button.
+</br>(Reduce this to only one item to get a consistent, single starting sound.)
+</br>./aud/startAud1.wav
+</br>./aud/startAud2.wav
+</br>./aud/startAud3.wav
+</br>
+- Columns 1 and 2 will each trigger a sound. (can set the attached variables to the same source to make it consistent)
+</br>./aud/col1Hit.wav
+</br>./aud/col2Hit.wav
+ -(Column 3 will trigger either a win noise related to the item that won, or it will make the miss noise)
+</br>
 - various victory sounds 
-./aud/jackSingle.wav
-./aud/jackMulti.wav
-./aud/queenSingle.wav
-./aud/queenMulti.wav
-./aud/kingSingle.wav
-./aud/kingMulti.wav
-./aud/mixHit.wav
-./aud/jackpot.wav
-
-Note:
-The images shown in the accompanying demo video were themed after star-wars, but that's licensed, so there's issues with posting things.
-For educational purposes only.
+</br>./aud/jackSingle.wav
+</br>./aud/jackMulti.wav
+</br>./aud/queenSingle.wav
+</br>./aud/queenMulti.wav
+</br>./aud/kingSingle.wav
+</br>./aud/kingMulti.wav
+</br>./aud/mixHit.wav
+</br>./aud/jackpot.wav
+</br>
+---
+</br>
+</br>Note:
+</br>The images shown in the accompanying demo video were themed after star-wars, but that's licensed, so there's issues with posting things.
+</br>For educational purposes only.
